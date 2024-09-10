@@ -12,6 +12,8 @@ Son los documentos que proporcionan información sobre comandos, programas, conf
 
 Al hablar de ambos juntos, se podría estar refiriendo a cómo empaquetar un programa o script dentro de un archivo .deb, y asegurarse de que las páginas de manual estén disponibles y comprimidas correctamente para que el usuario pueda acceder a la documentación del software instalado.
 
+## Comandos previos de deb:
+
 ![comandos](https://github.com/RaulRiCi/Sistemas_UnixLinux_Semana_4/blob/main/Capturas/Clase.png?raw=true)
 
 - nano mkbackup.sh:
@@ -52,11 +54,15 @@ Cambia el propietario y grupo de todos los archivos y directorios dentro de deb/
 
 ## Comandos para man:
 
+![PC](https://github.com/RaulRiCi/Sistemas_UnixLinux_Semana_4/blob/main/Capturas/primerosC.png?raw=true)
+
 - mkdir -p deb/usr/share/man/man8:
   Crea un directorio llamado man8 dentro de la ruta deb/usr/share/man/. La opción -p asegura que se creen todos los directorios intermedios necesarios si no existen.
 
 - sudo nano deb/usr/share/man/man8/mkbackup.8:
   Abre el editor de texto nano con permisos de superusuario (sudo) para editar o crear el archivo mkbackup.8 en el directorio deb/usr/share/man/man8/. Este archivo normalmente contendrá la página de manual para el comando mkbackup.
+
+  ![Nano](https://github.com/RaulRiCi/Sistemas_UnixLinux_Semana_4/blob/main/Capturas/nanoman8.png?raw=true)
 
 - sudo gzip deb/usr/local/man/man8/mkbackup.8:
   Comprime el archivo mkbackup.8 usando gzip, resultando en un archivo con la extensión .8.gz. Sin embargo, parece haber un error en la ruta, ya que se creó el archivo en deb/usr/share/man/man8/ y aquí se está intentando comprimir desde deb/usr/local/man/man8/. Si la intención es comprimir el archivo que acabas de editar, la ruta correcta sería deb/usr/share/man/man8/mkbackup.8.
@@ -72,3 +78,7 @@ Cambia el propietario y grupo de todos los archivos y directorios dentro de deb/
 
 - man mkbackup:
   Muestra la página de manual del comando mkbackup, asumiendo que el archivo mkbackup.8.gz fue instalado correctamente en el directorio de manual adecuado.
+
+  ![R](https://github.com/RaulRiCi/Sistemas_UnixLinux_Semana_4/blob/main/Capturas/resto%20de%20comandos.png?raw=true)
+
+  ![F](https://github.com/RaulRiCi/Sistemas_UnixLinux_Semana_4/blob/main/Capturas/final.png?raw=true)
